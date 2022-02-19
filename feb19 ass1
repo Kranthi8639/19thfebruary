@@ -1,21 +1,28 @@
-def prime(min,max):
+upto = int(input("Find sum of prime numbers upto : "))
 
-    for num in range(min,max+1):
+sum = 0
 
-        if num>1:
+for num in range(2, upto + 1):
 
-            for i in range(2,num):
+    i = 2
 
-                 if num%i==0:
+    
 
-                        break
+    for i in range(2, num):
 
-            else:      
+        if (int(num % i) == 0):
 
-                 print(num)
+            i = num
 
-min=int(input())
+            break;
 
-max=int(input())
+    #If the number is prime then add it.
 
-prime(min,max)
+    if i is not num:
+
+        sum += num
+
+print("\nSum of all prime numbers upto", upto, ":", sum)
+
+
+
